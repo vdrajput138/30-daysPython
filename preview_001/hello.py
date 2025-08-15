@@ -35,5 +35,3 @@ if __name__ == "__main__":
         print("Result:", divide(num1, num2))
     else:
         print("Invalid input")
-
-# end of file
