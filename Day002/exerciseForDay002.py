@@ -18,6 +18,13 @@ print(f"Subtraction of the two numbers provided is : {input1 - input2}")
     3. Build a simple currency converter that converts dollars to euros (use exchange rate 0.85).
 
 """
+dollors = float(input("Please enter the amount to convert in Euros: "))
+
+amount_in_euros = float(dollors * 0.85)
+
+print(f"The amount of dollors converted in euro is : {amount_in_euros}")
+
+
 
 """
     4. Write a program that calculates how much tip each person should pay when splitting a restaurant bill among friends (include tip percentage).
