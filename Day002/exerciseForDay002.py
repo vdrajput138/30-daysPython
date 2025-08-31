@@ -13,6 +13,11 @@ print(f"Subtraction of the two numbers provided is : {input1 - input2}")
 """
     2. Create a BMI calculator that takes height (in meters) and weight (in kg) and calculates BMI with 2 decimal places.
 """
+#Metric Formula - Weight(kg) / height(m)*height(m)
+#imperial formula - [Weight(kg) / height^2(m)] * 703
+
+
+
 
 """
     3. Build a simple currency converter that converts dollars to euros (use exchange rate 0.85).
