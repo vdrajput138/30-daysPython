@@ -30,6 +30,12 @@ print(f"The amount of dollors converted in euro is : {amount_in_euros}")
     4. Write a program that calculates how much tip each person should pay when splitting a restaurant bill among friends (include tip percentage).
 """
 
+total_bill = int(input("Total bill amount is?"))
+total_people= int(input(" bill will split in how many people?"))
+tip_percent = int(input(" tip in %"))
+total_amt = (total_bill * (tip_percent/ 100))
+print(f" each person will pay {total_amt/ total_people}")
+
 """
     5. Create a compound interest calculator that takes principal amount, interest rate, and years to calculate final amount.
 """
