@@ -3,7 +3,6 @@
 """
 
 
-
 """
     2. Write an age classifier that categorizes people as Child (0-12), Teen (13-19), Adult (20-64), or Senior (65+).
 """
