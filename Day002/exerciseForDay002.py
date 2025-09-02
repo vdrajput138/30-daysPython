@@ -55,7 +55,30 @@ print(f" each person will pay {total_amt/ total_people}")
 """
 # compound interest formula A = P(1 + r/n)^(nt)
 # simple  interest formula SI - (P * R * T)/100 
-
+sel_opt = input("Welcome to the Interest Calculator:\n Which one would you like to calculate? \n 1. Simple interest \t 2. Compound Interest")
+if sel_opt == "1":
+    principle_amt= int(input("Please enter amount: "))
+    rate_of_interest = float(input("Please enter the rate of interest: "))
+    period_of_time = int(input("Please enter the number of years"))
+    print(f"Simple interest on {principle_amt} amount is {float((principle_amt * rate_of_interest * period_of_time)/100 ,2)}")
+    
+elif sel_opt == "2":
+    principle_amt= int(input("Please enter amount: "))
+    rate_of_interest = float(input("Please enter the rate of interest: "))
+    period_of_time = int(input("Please enter the number of years (duration)"))
+    compound_time = int(input("Compunding will be :\n 1. Annual 2. Quaterly 3. Monthly"))
+    if compound_time == 1:
+        comp_time = 1
+    elif compound_time == 2:
+        comp_time = 4
+    elif compound_time == 3:
+        comp_time = 12
+    else:
+        print("We are considering it as annual. you need to provide a number.")
+        comp_time =1
+    power_op = comp_time * period_of_time
+    comp1_calc = 1 +  (rate_of_interest/100)/ period_of_time
+    print(f"For Compound interest on {principle_amt}, we will have {comp1_calc ** power_op}")
 
 """
     6. Build a program that converts seconds into hours, minutes, and remaining seconds format (e.g., "3665 seconds = 1 hour, 1 minute, 5 seconds").
@@ -131,6 +154,30 @@ elif selection_opt=="6":
 """
     9. Build a pizza order calculator that takes pizza size, number of pepperoni, and extra cheese to calculate total cost (define your own pricing).
 """
+print("Welcome to the pizza store. Please mention the numbers for the choices below.")
+p_orders = int(input("How many pizza would you like to order?(Please mention the count)"))
+p_size = int(input("Which pizza size would you prefer? \n1. Small 2. Medium 3. Large"))
+p_count = int(input("How many pepperoni would you like to add? ( please mention the count in number)"))
+e_cheese = int(input("Would you like to have extra cheese? \n1. Yes 2. No"))
+pizza_amount = 0
+
+if p_size == 1:
+    pizza_amount+= 10
+elif p_size == 2:
+    pizza_amount+=20
+elif p_size == 3:
+    pizza_amount+= 30
+else:
+    print("Invalid choice.")
+
+if p_count> 0:
+    pizza_amount = pizza_amount + (p_count * 2)
+
+if e_cheese == 1:
+    pizza_amount+=5
+
+if p_orders >0:
+    print(f"Your total bill is {pizza_amount * p_orders} only.")
 
 """
     10. Write a program that calculates your exact age in years, months, days, hours, minutes, and seconds from your birth date.
