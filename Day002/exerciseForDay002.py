@@ -151,6 +151,13 @@ elif selection_opt=="6":
     8. Create a "Life in Weeks" calculator that shows how many weeks you've lived and how many you have left (assuming you'll live to 80).
 """
 
+print("Welcome! Please Mention the birth year and you will get to know you have lived how many weeks and how many more you will live!")
+birth_year = int(input("May I know your birth year? Mention in 19XX/20XX format"))
+been_alive  = 2025 - birth_year
+will_be_alive = 80 - been_alive
+print(f"You have been alive for {been_alive * 52} weeks and you will live for about {will_be_alive * 52} weeks!")
+
+
 """
     9. Build a pizza order calculator that takes pizza size, number of pepperoni, and extra cheese to calculate total cost (define your own pricing).
 """
@@ -182,3 +189,5 @@ if p_orders >0:
 """
     10. Write a program that calculates your exact age in years, months, days, hours, minutes, and seconds from your birth date.
 """
+
+
