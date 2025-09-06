@@ -3,12 +3,7 @@
 
 
 
-4. Restaurant Ordering System
 
-Menu: Starter(₹200), Main(₹500), Dessert(₹150), Drink(₹100)
-Discounts: >₹1000 = 10% off, >₹1500 = 15% off, >₹2000 = 20% off
-Tax: 18% GST after discount
-Handle: Invalid menu choices, empty orders
 
 5. Password Strength Checker
 
@@ -83,9 +78,19 @@ Output different messages for each category
 
 """
 
-#print("Welcome to the World famous Jungle Safari Ride! Please, mention the age, name and total number of family members to create a token for you and your family.")
-
-
+age = int(input("To know the category, please enter the age :"))
+if 0.1 < age < 2:
+    print(f"As per age mentioned {age}, you are in Infant category.")
+elif 3<= age <12:
+    print(f"As per age mentioned {age}, you are a child")
+elif 13 <= age < 19:
+    print(f"As per age mentioned {age}, you a teenager!")
+elif 20 <= age < 64:
+    print(f"As per age mentioned {age}, you are n Adult")
+elif 65 <= age < 150:
+    print(f"As per age mentioned {age}, you are under Senior citizen category.")
+else:
+    print("Please mention the proper age in numberic value. e.g 10.")
 
 
 """
@@ -110,7 +115,7 @@ if weight > 0:
         ship_price += 50
     elif 1 <= weight < 5:
         ship_price += 100
-    elif 5 <= ship_price < 20:
+    elif 5 <= weight < 20:
         ship_price += 200
     elif weight > 200:
         ship_price += 500
@@ -132,4 +137,4 @@ else:
 if exp_delivery == "Yes" or exp_delivery == "1":
     ship_price += (ship_price * 0.5)
 
-print("Thank you for the inputs provided, your total shipping charges are "+ str(ship_price))
+print("Thank you for the inputs provided, your total shipping charges are INR-"+ str(ship_price)+ "only!")
