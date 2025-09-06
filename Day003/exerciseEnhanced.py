@@ -1,21 +1,7 @@
-"""1. Grade Calculator (Enhanced)
+"""
 
-Input: Multiple subject marks (at least 5 subjects)
-Calculate average, assign letter grade, determine if student passes (>60%)
-Handle invalid marks, divide by zero
 
-2. Advanced Age Classifier
 
-Categories: Infant (0-2), Child (3-12), Teen (13-19), Adult (20-64), Senior (65+)
-Twist: Handle negative ages, ages >150, non-numeric input
-Output different messages for each category
-
-3. Shipping Cost Calculator
-
-Weight-based pricing: <1kg=₹50, 1-5kg=₹100, 5-20kg=₹200, >20kg=₹500
-Distance multiplier: Local(1x), State(1.5x), National(2x), International(3x)
-Express delivery adds 50% to cost
-Handle: Zero weight, invalid distance options
 
 4. Restaurant Ordering System
 
@@ -33,7 +19,12 @@ Handle: Empty strings, spaces only"""
 
 
 """
-    Grade Calculator
+    1. Grade Calculator (Enhanced)
+
+Input: Multiple subject marks (at least 5 subjects)
+Calculate average, assign letter grade, determine if student passes (>60%)
+Handle invalid marks, divide by zero
+
 """
 
 print("Welcome to the Grade calcultion program!")
@@ -81,3 +72,64 @@ if passFail:
     print(f"Congratulations {student_name}!, you are passed and receive grade '{grade}'")
 else:
     print(f"Sorry to say {student_name}, you are failed with grade {grade}")
+
+
+"""
+    2. Advanced Age Classifier
+
+Categories: Infant (0-2), Child (3-12), Teen (13-19), Adult (20-64), Senior (65+)
+Twist: Handle negative ages, ages >150, non-numeric input
+Output different messages for each category
+
+"""
+
+#print("Welcome to the World famous Jungle Safari Ride! Please, mention the age, name and total number of family members to create a token for you and your family.")
+
+
+
+
+"""
+3. Shipping Cost Calculator
+
+Weight-based pricing: <1kg=₹50, 1-5kg=₹100, 5-20kg=₹200, >20kg=₹500
+Distance multiplier: Local(1x), State(1.5x), National(2x), International(3x)
+Express delivery adds 50% to cost
+Handle: Zero weight, invalid distance options
+
+"""
+
+print("Welcome to the Shipping Courier!")
+weight = float(input("Please enter the weight of parcel (in Kg): "))
+ship_distance = input("Where do you want to parcel the package? \n1. Local Transport 2. State Transport 3. National Transport 4. Internation Transport")
+exp_delivery = input("Do you want to make it expresss delivery? ( you will be charged extra 50% of the total cost). 1. Yes 2. No")
+ship_price = 0
+
+
+if weight > 0:
+    if weight < 1:
+        ship_price += 50
+    elif 1 <= weight < 5:
+        ship_price += 100
+    elif 5 <= ship_price < 20:
+        ship_price += 200
+    elif weight > 200:
+        ship_price += 500
+else:
+    print("Sorry, we are not allowed to receive the wrong inputs. Weight cannot be 0 or negative.")
+
+if ship_distance == "1" or ship_distance == "Local Transport":
+    ship_price += ship_price
+elif ship_distance == "2" or ship_distance == "State Transport":
+    ship_price += (ship_price*1.5)
+elif ship_distance == "3" or ship_distance == "National Transport":
+    ship_price += (ship_price *2)
+elif ship_distance == "4" or ship_distance =="International Transport":
+    ship_price +=(ship_price *3)
+else:
+    print("Please provide proper input. Either mention proper option number or the text next to the option number.")
+
+
+if exp_delivery == "Yes" or exp_delivery == "1":
+    ship_price += (ship_price * 0.5)
+
+print("Thank you for the inputs provided, your total shipping charges are "+ str(ship_price))
