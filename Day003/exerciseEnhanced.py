@@ -1,19 +1,4 @@
 """
-
-
-
-
-
-
-5. Password Strength Checker
-
-Requirements: 8+ chars, 1 uppercase, 1 lowercase, 1 number, 1 special char
-Output: Weak/Medium/Strong with specific feedback
-Handle: Empty strings, spaces only"""
-
-
-
-"""
     1. Grade Calculator (Enhanced)
 
 Input: Multiple subject marks (at least 5 subjects)
@@ -79,9 +64,9 @@ Output different messages for each category
 """
 
 age = int(input("To know the category, please enter the age :"))
-if 0.1 < age < 2:
+if 0 <= age <= 2:
     print(f"As per age mentioned {age}, you are in Infant category.")
-elif 3<= age <12:
+elif 3 <= age <12:
     print(f"As per age mentioned {age}, you are a child")
 elif 13 <= age < 19:
     print(f"As per age mentioned {age}, you a teenager!")
@@ -94,7 +79,7 @@ else:
 
 
 """
-3. Shipping Cost Calculator
+    3. Shipping Cost Calculator
 
 Weight-based pricing: <1kg=₹50, 1-5kg=₹100, 5-20kg=₹200, >20kg=₹500
 Distance multiplier: Local(1x), State(1.5x), National(2x), International(3x)
@@ -117,19 +102,19 @@ if weight > 0:
         ship_price += 100
     elif 5 <= weight < 20:
         ship_price += 200
-    elif weight > 200:
+    elif weight > 20:
         ship_price += 500
 else:
     print("Sorry, we are not allowed to receive the wrong inputs. Weight cannot be 0 or negative.")
 
 if ship_distance == "1" or ship_distance == "Local Transport":
-    ship_price += ship_price
+    pass
 elif ship_distance == "2" or ship_distance == "State Transport":
-    ship_price += (ship_price*1.5)
+    ship_price = (ship_price*1.5)
 elif ship_distance == "3" or ship_distance == "National Transport":
-    ship_price += (ship_price *2)
+    ship_price = (ship_price *2)
 elif ship_distance == "4" or ship_distance =="International Transport":
-    ship_price +=(ship_price *3)
+    ship_price =(ship_price *3)
 else:
     print("Please provide proper input. Either mention proper option number or the text next to the option number.")
 
@@ -138,3 +123,71 @@ if exp_delivery == "Yes" or exp_delivery == "1":
     ship_price += (ship_price * 0.5)
 
 print("Thank you for the inputs provided, your total shipping charges are INR-"+ str(ship_price)+ "only!")
+
+
+
+"""
+    4. Restaurant Ordering System
+
+Menu: Starter(₹200), Main(₹500), Dessert(₹150), Drink(₹100)
+Discounts: >₹1000 = 10% off, >₹1500 = 15% off, >₹2000 = 20% off
+Tax: 18% GST after discount
+Handle: Invalid menu choices, empty orders
+
+"""
+
+price = 0
+while True:
+    order = int(input("Please enter the item number to place an order. \n 1. Starter 2. Main 3. Dessert 4. Drink 5. Exit "))
+    if order == 5:
+        if price == 0:
+            print("So sorry to leave the restaunrant without having any food. Have a nice day!")
+        else:
+            if 1000 <  price <=1500:
+                price -= (price * 0.1)
+            elif 1500 < price <= 2000:
+                price -= (price * 0.15)
+            elif price > 2000:
+                price -= (price * 0.2)
+            price += (price * 0.18)
+            print(f"Thank you so much to place order! Your total bill is {price}")
+            break
+    elif order == 1:
+        print("Excellent choice! This costs 200 INR. Would you like to order anything else?")
+        price += 200
+    elif order ==2:
+        print("Great! You main course costs 500 INR. Would you like to order anything else?")
+        price +=500
+    elif order == 3:
+        print("Fantastic! Your dessert costs 150 INR. Would you like to order anything else?")
+        price += 150
+    elif order == 4:
+        print("Great option! Your drink costs 100 INR. Would you like to order anything else?")
+        price += 100
+    else:
+        print("Please mention only numeric value either 1 or 2 or 3 or 4 or 5. Please try again.")
+
+
+
+"""
+    5. Password Strength Checker
+
+Requirements: 8+ chars, 1 uppercase, 1 lowercase, 1 number, 1 special char
+Output: Weak/Medium/Strong with specific feedback
+Handle: Empty strings, spaces only
+
+"""
+
+ip_pwd = input("Please enter a password to check the password strength.")
+has_upper = any(c.isupper() for c in ip_pwd)
+has_digits = any(c.isdigit() for c in ip_pwd)
+has_lower = any(c.islower() for c in ip_pwd)
+has_symbol = any(c.isalnum() for c in ip_pwd)
+has_passwordLength = len(ip_pwd) > 8
+
+if not(has_passwordLength) or not(has_symbol):
+    print("Your password is weak")
+elif has_passwordLength and has_upper and has_lower and not(has_digits):
+    print("Your password strength is medium")
+elif has_passwordLength and has_upper and has_lower and has_digits:
+    print("Your password strength is Strong.")
