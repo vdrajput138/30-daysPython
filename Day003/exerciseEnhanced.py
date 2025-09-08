@@ -63,7 +63,11 @@ Output different messages for each category
 
 """
 
-age = int(input("To know the category, please enter the age :"))
+age = input("To know the category, please enter the age :")
+if age.isnumeric():
+    age = int(age)
+else:
+    print("Please provide the age in numeric format.")
 if 0 <= age <= 2:
     print(f"As per age mentioned {age}, you are in Infant category.")
 elif 3 <= age <12:
@@ -107,6 +111,9 @@ if weight > 0:
 else:
     print("Sorry, we are not allowed to receive the wrong inputs. Weight cannot be 0 or negative.")
 
+if exp_delivery == "Yes" or exp_delivery == "1":
+    ship_price += (ship_price * 0.5)
+
 if ship_distance == "1" or ship_distance == "Local Transport":
     pass
 elif ship_distance == "2" or ship_distance == "State Transport":
@@ -117,10 +124,6 @@ elif ship_distance == "4" or ship_distance =="International Transport":
     ship_price =(ship_price *3)
 else:
     print("Please provide proper input. Either mention proper option number or the text next to the option number.")
-
-
-if exp_delivery == "Yes" or exp_delivery == "1":
-    ship_price += (ship_price * 0.5)
 
 print("Thank you for the inputs provided, your total shipping charges are INR-"+ str(ship_price)+ "only!")
 
@@ -182,8 +185,8 @@ ip_pwd = input("Please enter a password to check the password strength.")
 has_upper = any(c.isupper() for c in ip_pwd)
 has_digits = any(c.isdigit() for c in ip_pwd)
 has_lower = any(c.islower() for c in ip_pwd)
-has_symbol = any(c.isalnum() for c in ip_pwd)
-has_passwordLength = len(ip_pwd) > 8
+has_symbol = any(not c.isalnum() and not c.isspace() for c in ip_pwd)
+has_passwordLength = len(ip_pwd) >= 8
 
 if not(has_passwordLength) or not(has_symbol):
     print("Your password is weak")
