@@ -1,6 +1,10 @@
+import random
 """ 
     1. Create a program that simulates rolling a dice (1-6) and tells the user if they got an even or odd number.
 """
+
+
+
 
 """ 
     2. Write a program that picks a random item from a list of your 5 favorite foods and says "Today you should eat [food]!"
@@ -11,8 +15,18 @@
 """ 
     3. Build a simple coin flip simulator that randomly shows "Heads" or "Tails".
 """
+coin_flip = random.randint(1,2)
+if coin_flip == 1:
+    coin_flipped = "Heads"
+else:
+    coin_flipped = "Tails"
+user_guess = int(input("Guess the toss. 1. Heads 2. Tails"))
 
 
+if user_guess == coin_flip:
+    print("Congrats! You have guessed it right!")
+else:
+    print(f"Sorry it was {coin_flipped}!")
 
 """
     4. Create a "Random Compliment Generator" that picks from a list of 10 compliments and personalizes it with the user's name.
