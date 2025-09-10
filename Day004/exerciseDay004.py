@@ -67,6 +67,29 @@ print(f"Today, we wil watch {movieSelection[moviRandom-1]} from {cat[catrandom-1
     7. Create a simple lottery number generator that picks 6 unique numbers between 1-49.
 """
 
+print("Welcome to the lottery club! We are now starting to declare the lottery number sequence!")
+num1 = random.randint(1,49)
+print(f"Our First number is number {num1}")
+
+num2 = random.randint(1,49)
+print(f"Our First number is number {num2}")
+
+num3 = random.randint(1,49)
+print(f"Our First number is number {num3}")
+
+
+num4 = random.randint(1,49)
+print(f"Our First number is number {num4}")
+
+
+num5 = random.randint(1,49)
+print(f"Our First number is number {num5}")
+
+
+num6 = random.randint(1,49)
+print(f"Our First number is number {num6}")
+
+print(f"Wow! our lottery sequence is - {num1} {num2} {num3} {num4} {num5} {num6}. Congratulations to the winner!")
 
 """
     8. Build a "Rock Paper Scissors" game where the computer randomly chooses and plays against the user.
