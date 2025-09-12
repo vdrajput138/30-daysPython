@@ -3,12 +3,23 @@ import random
     1. Create a program that simulates rolling a dice (1-6) and tells the user if they got an even or odd number.
 """
 
-
+print("Welcome to the number with rolling dice!")
+rolledDice = random.randint(1,6)
+evenOrOdd = "undefined"
+if rolledDice % 2 == 0:
+    evenOrOdd = "Even"
+else:
+    evenOrOdd = "Odd"
+print(f"Wow! The rolled number is {rolledDice} and it's a {evenOrOdd} number.")
 
 
 """ 
     2. Write a program that picks a random item from a list of your 5 favorite foods and says "Today you should eat [food]!"
 """
+
+listOfFavFoods = ["Banana", "Apple", "Watermelon", "Sapota", "Kiwi"]
+numberSel = random.randint(0,4)
+print(f"Today you should eat {listOfFavFoods[numberSel]}")
 
 
 
