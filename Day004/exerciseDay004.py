@@ -43,8 +43,10 @@ else:
     4. Create a "Random Compliment Generator" that picks from a list of 10 compliments and personalizes it with the user's name.
 """
 
-
-
+complimetns = ["Your kindness is contagious.", "Your smile could power a small city.", "You have an amazing sense of humor.", "If you were a vegetable, you’d be a cute-cumber.", "Your confidence is inspiring.", "You’re like a human Swiss Army knife – prepared for anything!", "You’re an exceptional problem-solver.", "Your dance moves are so smooth, butter is jealous." , "Your creativity knows no bounds." , "You’re the human equivalent of a perfect cup of coffee."]
+nameip = input("Hello, may I know your name? ")
+randpick = random.randint(1,10)
+print(f"Hello, {nameip}! {complimetns[randpick -1 ]}")
 
 """
     5. Write a program that generates a random password using a list of characters (letters, numbers, symbols) - make it 6 characters long.
@@ -74,6 +76,7 @@ else:
 
 print(f"Today, we wil watch {movieSelection[moviRandom-1]} from {cat[catrandom-1]} category")
 
+
 """
     7. Create a simple lottery number generator that picks 6 unique numbers between 1-49.
 """
@@ -102,9 +105,43 @@ print(f"Our First number is number {num6}")
 
 print(f"Wow! our lottery sequence is - {num1} {num2} {num3} {num4} {num5} {num6}. Congratulations to the winner!")
 
+
 """
     8. Build a "Rock Paper Scissors" game where the computer randomly chooses and plays against the user.
 """
+
+pickOne = ["Rock", "Paer", "Scissor"] 
+userIp = input("Welcome to the the game of Rock, Paper, Scissor! \n What would you like to choose? 1. Rock 2. Paper 3. Scissor.")
+randomSelection = random.randint(1,3)
+
+
+
+if userIp == "1" or "Rock":
+    if pickOne[randomSelection -1 ] == "Rock":
+        print("Its a draw!")
+    elif pickOne[randomSelection -1 ] == "Paper":
+        print("Oh, you Lost!")
+    else:
+        print("Yay! you win!")
+elif userIp == "2" or "Paper":
+    if pickOne[randomSelection -1 ] == "Rock":
+        print("You Win!")
+    elif pickOne[randomSelection -1 ] == "Paper":
+        print("Its a draw!")
+    else:
+        print("oh, sorry!, You lost.")
+elif userIp == "3" or "Scissor":
+    if pickOne[randomSelection -1 ] == "Rock":
+        print("Oh, you lost!")
+    elif pickOne[randomSelection -1 ] == "Paper":
+        print("Great! You won!")
+    else:
+        print("Oh, its a draw!")
+else:
+    print("Wrong Option.")
+
+
+
 
 
 """
