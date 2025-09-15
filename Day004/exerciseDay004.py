@@ -141,15 +141,119 @@ else:
     print("Wrong Option.")
 
 
-
-
-
 """
     9. Create a "Daily Motivation Generator" that combines random motivational quotes with random goal suggestions.
 """
+goal_suggestions = ["Learn a new skill, like a language or instrument.",
+"Improve your mindset and develop a growth mindset.", "Practice mindfulness or meditation daily.",
+"Embrace self-care routines, such as a self-care morning or Sunday.", "Become a better listener.",
+"Read a certain number of books per year.", "Write a book or start a creative project.", "Journal or use a planner.",
+"Expand your professional network.", "Develop a new hard skill, such as a programming language.", 
+"Earn a new professional certification.", "Find a mentor or become one.", "Find a career you love.", 
+"Learn to make effective decisions.", "Adopt a healthier lifestyle, like biking to work.", 
+"Improve your eating habits, such as trying a new cuisine monthly.", "Go for walks every day.", 
+"Improve your self-esteem and attend more social events.", "Create a family fun day and make it a tradition."]
 
+quotes = ['“Success is not final; failure is not fatal: It is the courage to continue that counts.” —Winston Churchill',
+'“It is better to fail in originality than to succeed in imitation.” —Herman Melville',
+'“The road to success and the road to failure are almost exactly the same.” —Colin R. Davis',
+'“Success usually comes to those who are too busy to be looking for it.” —Henry David Thoreau', 
+'“Develop success from failures. Discouragement and failure are two of the surest stepping stones to success.” —Dale Carnegie',
+'“Nothing in the world can take the place of persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. The slogan ’Press On’ has solved and always will solve the problems of the human race.” —Calvin Coolidge',
+'“There are three ways to ultimate success: The first way is to be kind. The second way is to be kind. The third way is to be kind.” —Mister Rogers',
+'“Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.” —John Wooden',
+'“I never dreamed about success. I worked for it.” —Estée Lauder',
+'“Success is getting what you want; happiness is wanting what you get.” ―W. P. Kinsella',
+'“It is remarkable how much long-term advantage people like us have gotten by trying to be consistently not stupid instead of trying to be very intelligent.” —Charlie Munger',
+'“You can\'t be that kid standing at the top of the waterslide, overthinking it. You have to go down the chute.” —Tina Fey',
+'“When I believe in something, I\'m like a dog with a bone.” —Melissa McCarthy',
+'“And the day came when the risk to remain tight in a bud was more painful than the risk it took to blossom.” —Anaïs Nin',
+'“The standard you walk past is the standard you accept.” —David Hurley',
+'“I\'ve searched all the parks in all the cities and found no statues of committees.” —Gilbert K. Chesterton',
+'“Success is stumbling from failure to failure with no loss of enthusiasm.” ―Winston Churchill',
+'“Keep your eyes on the stars and your feet on the ground.” ―Theodore Roosevelt',
+'“Do not stop thinking of life as an adventure. You have no security unless you can live bravely, excitingly, imaginatively; unless you can choose a challenge instead of competence.” ―Eleanor Roosevelt',
+'“Perfection is not attainable. But if we chase perfection we can catch excellence.” —Vince Lombardi',
+'“Get a good idea and stay with it. Dog it, and work at it until it\'s done right.” —Walt Disney',
+'“Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.” —Helen Keller',
+'“The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.” —Winston Churchill',
+'“Don\'t let yesterday take up too much of today.” —Will Rogers',
+'“You learn more from failure than from success. Don\'t let it stop you. Failure builds character.” —Unknown',
+'“If you are working on something that you really care about, you don\'t have to be pushed. The vision pulls you.” —Steve Jobs',
+'“Experience is a hard teacher because she gives the test first, the lesson afterward.” ―Vernon Sanders Law',
+'“To know how much there is to know is the beginning of learning to live.” —Dorothy West',
+'“Goal setting is the secret to a compelling future.” —Tony Robbins']
+
+goalrandint = random.randint(1,12)
+quoterandint = random.randint(1,30)
+print(f"Today's Quote - {quotes[quoterandint]} and your goal suggestion is - {goal_suggestions[goalrandint]}")
 
 
 """
     10. Write a program that creates a random study schedule - randomly assigns 5 subjects to 5 different time slots.
 """
+
+subjects = ["Maths","English","Maths","History","Geography","Politics","Grammer"]
+time_slots = ["10-11 am","12-1pm", "3-4pm", "5-6pm", "7-8pm","7-8am", "9-10am"]
+
+sub1 = random.randint(1,7)
+sub2 = random.randint(1,7)
+if sub2 == sub1:
+    sub2 = random.randint(1,7)
+    if sub2 == sub1:
+        sub2 = random.randint(1,7)
+
+sub3 = random.randint(1,7)
+if sub3 == sub1 or sub3 == sub2:
+    sub3 = random.randint(1,7)
+    if sub3 == sub1 or sub3 == sub2:
+        sub3 = random.randint(1,7)
+
+sub4 = random.randint(1,7)
+if sub4 == sub1 or sub4 == sub2 or sub4 == sub3:
+    sub4 = random.randint(1,7)
+    if sub4 == sub1 or sub4 == sub2 or sub4 == sub3:
+        sub4 = random.randint(1,7)
+
+
+sub5 = random.randint(1,7)
+if sub5 == sub1 or sub5 == sub2 or sub5 == sub3 or sub5 == sub4:
+    sub5 = random.randint(1,7)
+    if sub5 == sub1 or sub5 == sub2 or sub5 == sub3 or sub5 == sub4:
+        sub5 = random.randint(1,7)
+
+time_1 = random.randint(1,7)
+
+time_2 = random.randint(1,7)
+if time_2 == time_1:
+    time_2 = random.randint(1,7)
+    if time_2 == time_1:
+        time_2 = random.randint(1,7)
+
+time_3 = random.randint(1,7)
+if time_3 == time_1 or time_3 == time_2:
+    time_3 = random.randint(1,7)
+    if time_3 == time_1 or time_3 == time_2:
+        time_3 = random.randint(1,7)
+
+time_4 = random.randint(1,7)
+if time_4 == time_1 or time_4 == time_2 or time_4 == time_3:
+    time_4 = random.randint(1,7)
+    if time_3 == time_1 or time_3 == time_2:
+        time_4 = random.randint(1,7)
+
+time_5 = random.randint(1,7)
+if time_5 == time_1 or time_5 == time_2 or time_5 == time_3 or time_5 == time_4:
+    time_5 = random.randint(1,7)
+    if time_3 == time_1 or time_3 == time_2:
+        time_5 = random.randint(1,7)
+
+print(f"""
+Schedule for the day : 
+{time_slots[time_1-1]} - {subjects[sub1 -1]}
+{time_slots[time_2-1]} - {subjects[sub2 -1]}
+{time_slots[time_3-1]} - {subjects[sub3 -1]}
+{time_slots[time_4-1]} - {subjects[sub4 -1]}
+{time_slots[time_5-1]} - {subjects[sub5 -1]}
+
+""")
