@@ -257,3 +257,68 @@ Schedule for the day :
 {time_slots[time_5-1]} - {subjects[sub5 -1]}
 
 """)
+
+
+"""
+11. Random Color Palette Generator
+
+Create 3 lists: warm_colors, cool_colors, neutral_colors
+Randomly pick one category, then select 5 colors from that category
+Ensure no duplicate colors in final palette
+
+12. Random Workout Generator
+
+Lists: upper_body_exercises, lower_body_exercises, cardio_exercises
+Generate a 7-exercise routine with exactly 2 from each category + 1 random bonus
+No exercise should repeat
+
+13. Random Playlist Creator
+
+4 genre lists: rock, pop, classical, jazz (5 songs each)
+Create 8-song playlist with at least 1 song from each genre
+Remaining 4 songs can be from any genre, but no duplicates
+
+14. Random Recipe Ingredient Substitution
+
+Original recipe list: ["flour", "eggs", "milk", "sugar", "butter"]
+Substitution options for each ingredient (nested lists)
+Randomly substitute 2-3 ingredients and show the new recipe
+
+15. Random Tournament Bracket Generator
+
+List of 8 player names
+Create random matchups for first round (4 pairs)
+Simulate random winners to create final bracket
+No player should play themselves
+
+Advanced Logic Exercises (16-20):
+16. Random Escape Room Puzzle
+
+3 rooms, each with 3-4 random clues from different clue pools
+Player picks a room, gets random clues, must solve to "escape"
+Track which clues were used (no repeats across rooms)
+
+17. Random Shopping List Optimizer
+
+Categories: produce, dairy, meat, pantry, frozen
+Randomly generate 12 items across categories
+Sort them by optimal shopping path (produce→dairy→meat→pantry→frozen)
+
+18. Random Language Learning Flashcards
+
+20 English words with translations in 3 languages
+Randomly select 5 words and random target language
+Quiz format with random order, track score
+
+19. Random Weather-Based Activity Suggester
+
+Weather conditions list: sunny, rainy, snowy, cloudy, windy
+Activity lists for each weather type
+Randomly pick weather + activity, but add constraints (no swimming when cold)
+
+20. Random Group Project Assigner
+
+15 student names, 5 different project types
+Create 3 groups of 5 students each
+Randomly assign project types ensuring balanced skill distribution
+"""
