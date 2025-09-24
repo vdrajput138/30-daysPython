@@ -26,27 +26,23 @@ print(f"Today you should eat {random.choice(listOfFavFoods)}")
 """ 
     3. Build a simple coin flip simulator that randomly shows "Heads" or "Tails".
 """
-coin_flip = random.randint(1,2)
-if coin_flip == 1:
-    coin_flipped = "Heads"
-else:
-    coin_flipped = "Tails"
-user_guess = int(input("Guess the toss. 1. Heads 2. Tails"))
+toss = ["Heads","Tails"]
+coin_flip = random.choice(toss)
+user_guess = input("Guess the toss. \nHeads or Tails? : ")
 
 
 if user_guess == coin_flip:
     print("Congrats! You have guessed it right!")
 else:
-    print(f"Sorry it was {coin_flipped}!")
+    print(f"Sorry it was {coin_flip}!")
 
 """
     4. Create a "Random Compliment Generator" that picks from a list of 10 compliments and personalizes it with the user's name.
 """
 
-complimetns = ["Your kindness is contagious.", "Your smile could power a small city.", "You have an amazing sense of humor.", "If you were a vegetable, you’d be a cute-cumber.", "Your confidence is inspiring.", "You’re like a human Swiss Army knife – prepared for anything!", "You’re an exceptional problem-solver.", "Your dance moves are so smooth, butter is jealous." , "Your creativity knows no bounds." , "You’re the human equivalent of a perfect cup of coffee."]
+compliments = ["Your kindness is contagious.", "Your smile could power a small city.", "You have an amazing sense of humor.", "If you were a vegetable, you’d be a cute-cumber.", "Your confidence is inspiring.", "You’re like a human Swiss Army knife – prepared for anything!", "You’re an exceptional problem-solver.", "Your dance moves are so smooth, butter is jealous." , "Your creativity knows no bounds." , "You’re the human equivalent of a perfect cup of coffee."]
 nameip = input("Hello, may I know your name? ")
-randpick = random.randint(1,10)
-print(f"Hello, {nameip}! {complimetns[randpick -1 ]}")
+print(f"Hello, {nameip}! {random.choice(compliments)}")
 
 """
     5. Write a program that generates a random password using a list of characters (letters, numbers, symbols) - make it 6 characters long.
@@ -67,19 +63,17 @@ hmovies = ["D","E","F"]
 cmovies = ["G","H","I"]
 tmovies = ["J","K","L"]
 
-catrandom = random.randint(1,4)
-moviRandom = random.randint(1,3)
-movieSelection = [];
-if catrandom == 1:
-    movieSelection = amovies
-elif catrandom ==2:
-    movieSelection = hmovies
-elif catrandom == 3:
-    movieSelection = cmovies
+catrandom = random.choice(cat)
+if catrandom == "Action":
+    movieSelection = random.choice(amovies)
+elif catrandom == "Horror":
+    movieSelection = random.choice(hmovies)
+elif catrandom == "Comedy":
+    movieSelection = random.choice(cmovies)
 else:
-    movieSelection = tmovies
+    movieSelection = random.choice(tmovies)
 
-print(f"Today, we wil watch {movieSelection[moviRandom-1]} from {cat[catrandom-1]} category")
+print(f"Today, we wil watch {movieSelection} from {catrandom} category")
 
 
 """
@@ -94,35 +88,15 @@ print(f"Congratulation! The number is {random.sample(range(1,50),6)}")
     8. Build a "Rock Paper Scissors" game where the computer randomly chooses and plays against the user.
 """
 
-pickOne = ["Rock", "Paer", "Scissor"] 
-userIp = input("Welcome to the the game of Rock, Paper, Scissor! \n What would you like to choose? 1. Rock 2. Paper 3. Scissor.")
-randomSelection = random.randint(1,3)
+pickOne = random.choice(["Rock", "Paper", "Scissor"]) 
+userIp = input("Welcome to the the game of Rock, Paper, Scissor! \n What would you like to choose? \n Rock, Paper or Scissor?: ")
 
-
-
-if userIp = "1" or "Rock":
-    if pickOne[randomSelection -1 ] == "Rock":
-        print("Its a draw!")
-    elif pickOne[randomSelection -1 ] == "Paper":
-        print("Oh, you Lost!")
-    else:
-        print("Yay! you win!")
-elif userIp = "2" or "Paper":
-    if pickOne[randomSelection -1 ] == "Rock":
-        print("You Win!")
-    elif pickOne[randomSelection -1 ] == "Paper":
-        print("Its a draw!")
-    else:
-        print("oh, sorry!, You lost.")
-elif userIp = "3" or "Scissor":
-    if pickOne[randomSelection -1 ] == "Rock":
-        print("Oh, you lost!")
-    elif pickOne[randomSelection -1 ] == "Paper":
-        print("Great! You won!")
-    else:
-        print("Oh, its a draw!")
-else:
-    print("Wrong Option.")
+if pickOne == userIp:
+    print("Its a draw!")
+elif (pickOne == "Paper" and userIp == "Rock") or (pickOne == "Scissor" and userIp == "Paper") or (pickOne == "Rock" and userIp == "Scissor"):
+    print("You Lost.")
+elif (pickOne == "Paper" and userIp == "Scissor") or (pickOne == "Rock" and userIp == "Paper") or (pickOne == "Scissor" and userIp == "Rock"):
+    print("You've Won!")
 
 
 """
@@ -168,9 +142,8 @@ quotes = ['“Success is not final; failure is not fatal: It is the courage to c
 '“To know how much there is to know is the beginning of learning to live.” —Dorothy West',
 '“Goal setting is the secret to a compelling future.” —Tony Robbins']
 
-goalrandint = random.randint(1,12)
-quoterandint = random.randint(1,30)
-print(f"Today's Quote - {quotes[quoterandint]} and your goal suggestion is - {goal_suggestions[goalrandint]}")
+
+print(f"Today's Quote - {random.choice(quotes)} and your goal suggestion is - {random.choice(goal_suggestions)}")
 
 
 """
@@ -178,7 +151,7 @@ print(f"Today's Quote - {quotes[quoterandint]} and your goal suggestion is - {go
 """
 
 subjects = ["Maths","English","History","Geography","Politics","Grammer"]
-time_slots = ["10-11 am","12-1pm", "3-4pm", "5-6pm", "7-8pm",s "9-10am"]
+time_slots = ["10-11 am","12-1pm", "3-4pm", "5-6pm", "7-8pm", "9-10am"]
 
 random.shuffle(subjects)
 random.shuffle(time_slots)
