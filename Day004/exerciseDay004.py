@@ -18,8 +18,8 @@ print(f"Wow! The rolled number is {rolledDice} and it's a {evenOrOdd} number.")
 """
 
 listOfFavFoods = ["Banana", "Apple", "Watermelon", "Sapota", "Kiwi"]
-numberSel = random.randint(0,4)
-print(f"Today you should eat {listOfFavFoods[numberSel]}")
+# numberSel = random.randint(0,4)
+print(f"Today you should eat {random.choice(listOfFavFoods)}")
 
 
 
@@ -51,6 +51,11 @@ print(f"Hello, {nameip}! {complimetns[randpick -1 ]}")
 """
     5. Write a program that generates a random password using a list of characters (letters, numbers, symbols) - make it 6 characters long.
 """
+letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+numbers = "1234567890"
+symbols = "!@#$%^&*()_+-={}[];':,.\\/\""
+combination = letters+numbers+symbols
+print(f"You can use the password as {''.join(random.sample(combination,k=8))}")
 
 
 """
@@ -82,28 +87,7 @@ print(f"Today, we wil watch {movieSelection[moviRandom-1]} from {cat[catrandom-1
 """
 
 print("Welcome to the lottery club! We are now starting to declare the lottery number sequence!")
-num1 = random.randint(1,49)
-print(f"Our First number is number {num1}")
-
-num2 = random.randint(1,49)
-print(f"Our First number is number {num2}")
-
-num3 = random.randint(1,49)
-print(f"Our First number is number {num3}")
-
-
-num4 = random.randint(1,49)
-print(f"Our First number is number {num4}")
-
-
-num5 = random.randint(1,49)
-print(f"Our First number is number {num5}")
-
-
-num6 = random.randint(1,49)
-print(f"Our First number is number {num6}")
-
-print(f"Wow! our lottery sequence is - {num1} {num2} {num3} {num4} {num5} {num6}. Congratulations to the winner!")
+print(f"Congratulation! The number is {random.sample(range(1,50),6)}")
 
 
 """
@@ -116,21 +100,21 @@ randomSelection = random.randint(1,3)
 
 
 
-if userIp == "1" or "Rock":
+if userIp = "1" or "Rock":
     if pickOne[randomSelection -1 ] == "Rock":
         print("Its a draw!")
     elif pickOne[randomSelection -1 ] == "Paper":
         print("Oh, you Lost!")
     else:
         print("Yay! you win!")
-elif userIp == "2" or "Paper":
+elif userIp = "2" or "Paper":
     if pickOne[randomSelection -1 ] == "Rock":
         print("You Win!")
     elif pickOne[randomSelection -1 ] == "Paper":
         print("Its a draw!")
     else:
         print("oh, sorry!, You lost.")
-elif userIp == "3" or "Scissor":
+elif userIp = "3" or "Scissor":
     if pickOne[randomSelection -1 ] == "Rock":
         print("Oh, you lost!")
     elif pickOne[randomSelection -1 ] == "Paper":
@@ -193,70 +177,18 @@ print(f"Today's Quote - {quotes[quoterandint]} and your goal suggestion is - {go
     10. Write a program that creates a random study schedule - randomly assigns 5 subjects to 5 different time slots.
 """
 
-subjects = ["Maths","English","Maths","History","Geography","Politics","Grammer"]
-time_slots = ["10-11 am","12-1pm", "3-4pm", "5-6pm", "7-8pm","7-8am", "9-10am"]
+subjects = ["Maths","English","History","Geography","Politics","Grammer"]
+time_slots = ["10-11 am","12-1pm", "3-4pm", "5-6pm", "7-8pm",s "9-10am"]
 
-sub1 = random.randint(1,7)
-sub2 = random.randint(1,7)
-if sub2 == sub1:
-    sub2 = random.randint(1,7)
-    if sub2 == sub1:
-        sub2 = random.randint(1,7)
+random.shuffle(subjects)
+random.shuffle(time_slots)
 
-sub3 = random.randint(1,7)
-if sub3 == sub1 or sub3 == sub2:
-    sub3 = random.randint(1,7)
-    if sub3 == sub1 or sub3 == sub2:
-        sub3 = random.randint(1,7)
-
-sub4 = random.randint(1,7)
-if sub4 == sub1 or sub4 == sub2 or sub4 == sub3:
-    sub4 = random.randint(1,7)
-    if sub4 == sub1 or sub4 == sub2 or sub4 == sub3:
-        sub4 = random.randint(1,7)
-
-
-sub5 = random.randint(1,7)
-if sub5 == sub1 or sub5 == sub2 or sub5 == sub3 or sub5 == sub4:
-    sub5 = random.randint(1,7)
-    if sub5 == sub1 or sub5 == sub2 or sub5 == sub3 or sub5 == sub4:
-        sub5 = random.randint(1,7)
-
-time_1 = random.randint(1,7)
-
-time_2 = random.randint(1,7)
-if time_2 == time_1:
-    time_2 = random.randint(1,7)
-    if time_2 == time_1:
-        time_2 = random.randint(1,7)
-
-time_3 = random.randint(1,7)
-if time_3 == time_1 or time_3 == time_2:
-    time_3 = random.randint(1,7)
-    if time_3 == time_1 or time_3 == time_2:
-        time_3 = random.randint(1,7)
-
-time_4 = random.randint(1,7)
-if time_4 == time_1 or time_4 == time_2 or time_4 == time_3:
-    time_4 = random.randint(1,7)
-    if time_3 == time_1 or time_3 == time_2:
-        time_4 = random.randint(1,7)
-
-time_5 = random.randint(1,7)
-if time_5 == time_1 or time_5 == time_2 or time_5 == time_3 or time_5 == time_4:
-    time_5 = random.randint(1,7)
-    if time_3 == time_1 or time_3 == time_2:
-        time_5 = random.randint(1,7)
-
-print(f"""
-Schedule for the day : 
-{time_slots[time_1-1]} - {subjects[sub1 -1]}
-{time_slots[time_2-1]} - {subjects[sub2 -1]}
-{time_slots[time_3-1]} - {subjects[sub3 -1]}
-{time_slots[time_4-1]} - {subjects[sub4 -1]}
-{time_slots[time_5-1]} - {subjects[sub5 -1]}
-
-""")
+print(f"On {time_slots[0]} - subject is {subjects[0]}")
+print(f"On {time_slots[1]} - subject is {subjects[1]}")
+print(f"On {time_slots[2]} - subject is {subjects[2]}")
+print(f"On {time_slots[3]} - subject is {subjects[3]}")
+print(f"On {time_slots[4]} - subject is {subjects[4]}")
+print(f"On {time_slots[5]} - subject is {subjects[5]}")
 
 
 """
