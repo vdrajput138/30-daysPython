@@ -164,12 +164,31 @@ print(f"On {time_slots[4]} - subject is {subjects[4]}")
 print(f"On {time_slots[5]} - subject is {subjects[5]}")
 
 
-"""
+""""
 11. Random Color Palette Generator
 
 Create 3 lists: warm_colors, cool_colors, neutral_colors
 Randomly pick one category, then select 5 colors from that category
 Ensure no duplicate colors in final palette
+
+"""
+
+warm_colors = ["light blue","Light green", "Light gold","yellow","light orange","light grey"]
+cool_colors = ["cyan","sky blue","light blue","silver","light pink","light green"]
+natural_colors = ["red","blue","green","pink","black","purple"]
+
+arr_colors = [warm_colors, cool_colors,natural_colors]
+
+random_choice = random.choice(arr_colors)
+
+list_of_colors = random.sample(random_choice,5) 
+
+print(list_of_colors)
+
+
+
+"""
+
 
 12. Random Workout Generator
 
