@@ -186,15 +186,33 @@ list_of_colors = random.sample(random_choice,5)
 print(list_of_colors)
 
 
-
 """
-
-
 12. Random Workout Generator
 
 Lists: upper_body_exercises, lower_body_exercises, cardio_exercises
 Generate a 7-exercise routine with exactly 2 from each category + 1 random bonus
 No exercise should repeat
+
+"""
+
+upper_body_exercise = ["exercise 1","exercise 2","exercise 3","exercise 4","exercise 5"]
+
+lower_body_exercise = ["exercise 6",'exercise 7',"exercise 8","exercise 9", "exercise 10"]
+
+cardio_exercise = ["exercise 11", "exercise 12", "exercise 13", "exercise 14", "exercise 15"]
+
+bonus_exercise = ["exercise 16","exercise 17","exercise 18"]
+
+two_samples_lower = random.sample(lower_body_exercise,2)
+two_samples_upper = random.sample(upper_body_exercise,2)
+two_samples_cardio = random.sample(cardio_exercise,2)
+sample_bonus = random.choice(bonus_exercise)
+
+print(f"These exercise you can perform for this week - {two_samples_lower}, {two_samples_upper},{two_samples_cardio} and one bonus {sample_bonus}")
+
+
+
+"""
 
 13. Random Playlist Creator
 
