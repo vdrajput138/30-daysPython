@@ -211,15 +211,40 @@ sample_bonus = random.choice(bonus_exercise)
 print(f"These exercise you can perform for this week - {two_samples_lower}, {two_samples_upper},{two_samples_cardio} and one bonus {sample_bonus}")
 
 
-
 """
-
 13. Random Playlist Creator
 
 4 genre lists: rock, pop, classical, jazz (5 songs each)
 Create 8-song playlist with at least 1 song from each genre
 Remaining 4 songs can be from any genre, but no duplicates
+"""
+rock_songs = ["rock and roll", "Highway to hell", "Pink", "hero", "born to fly", "just do it"]
+pop_songs = ["britney bitch", "ketty perry","kiss the girl", "friday night", "taylor swift","adele"]
+classical_songs = ["jazz_song","flute_song","armin_nonbase","noor", "lata ji", "base_songs"]
+jazz_songs = ["song1", "song2", "song3", "song4", "song5", "song6"]
 
+rock_sample = random.choice(rock_songs)
+rock_songs.remove(rock_sample)
+
+pop_sample = random.choice(pop_songs)
+pop_songs.remove(pop_sample)
+
+classical_sample = random.choice(classical_songs)
+classical_songs.remove(classical_sample)    
+
+jazz_sample = random.choice(jazz_songs)
+jazz_songs.remove(jazz_sample) 
+
+all_songs = rock_songs + pop_songs + classical_songs + jazz_songs
+remaining_songs = random.sample(all_songs,4)
+
+remaining_songs_strings = ", ".join(remaining_songs)
+
+print(f"Your playlist for today is {rock_sample}, {pop_sample}, {classical_sample}, {jazz_sample} and the remaining songs are {remaining_songs_strings}")
+
+
+
+"""
 14. Random Recipe Ingredient Substitution
 
 Original recipe list: ["flour", "eggs", "milk", "sugar", "butter"]
