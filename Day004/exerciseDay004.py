@@ -354,16 +354,31 @@ modified_og_recipe_list_string = ", ".join(og_recipe_list)
 
 print(f"We had a original receipe ingredients as {og_recipe_list_string} which we updated by switching few ingredeints {modified_og_recipe_list_string}")
 
+
 """
-
-
 15. Random Tournament Bracket Generator
 
 List of 8 player names
 Create random matchups for first round (4 pairs)
 Simulate random winners to create final bracket
 No player should play themselves
+"""
+players_list = ["p1","p2","p3","p4","p5","p6","p7","p8"]
 
+random.shuffle(players_list)
+
+
+list_of_chunks = [
+[players_list[0], players_list[1]],
+[players_list[2], players_list[3]],
+[players_list[4], players_list[5]],
+[players_list[6], players_list[7]]]
+
+print(f"Here's the random selection - {random.sample(list_of_chunks,1)}")
+
+
+
+"""
 Advanced Logic Exercises (16-20):
 16. Random Escape Room Puzzle
 
