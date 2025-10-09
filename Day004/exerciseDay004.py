@@ -377,20 +377,52 @@ list_of_chunks = [
 print(f"Here's the random selection - {random.sample(list_of_chunks,1)}")
 
 
-
 """
-Advanced Logic Exercises (16-20):
 16. Random Escape Room Puzzle
 
 3 rooms, each with 3-4 random clues from different clue pools
 Player picks a room, gets random clues, must solve to "escape"
 Track which clues were used (no repeats across rooms)
+"""
 
+"""
 17. Random Shopping List Optimizer
 
 Categories: produce, dairy, meat, pantry, frozen
 Randomly generate 12 items across categories
 Sort them by optimal shopping path (produce→dairy→meat→pantry→frozen)
+"""
+
+
+
+
+"""
+18. Random Language Learning Flashcards
+
+20 English words with translations in 3 languages
+Randomly select 5 words and random target language
+Quiz format with random order, track score
+"""
+words = ["Hi","Mango","Man","Woman","Wood", "Tree", "Sunrise", "Dawn","Clever"]
+hindi_translation = ["namste","Aam","Insaan","Aurat","Lakdi","Ped","suryoday","Sham","hoshiyar"]
+marathi_translation =["namaskar","Amba","Manus","Bai","Lakud","Jhad","Suryoday","Sandhyakal","Hushar"]
+
+sample_random_words = random.sample(words,5)
+
+for i in sample_random_words:
+    index_of_word = words.index(i)
+    langugae_selection = random.choice(range(0,1))
+    if langugae_selection == 0:
+        translated_meaning = hindi_translation[index_of_word]
+    else:
+        translated_meaning = marathi_translation[index_of_word]
+    print(f"We have a random word as {i} and its meaning in {"Hindi" if langugae_selection ==0 else "Marathi"} is {translated_meaning}")
+
+"""
+Advanced Logic Exercises (16-20):
+
+
+
 
 18. Random Language Learning Flashcards
 
