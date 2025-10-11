@@ -384,6 +384,22 @@ print(f"Here's the random selection - {random.sample(list_of_chunks,1)}")
 Player picks a room, gets random clues, must solve to "escape"
 Track which clues were used (no repeats across rooms)
 """
+room1_clue = ["check the door latch", "check the hanging wall","tap the rung","check the window","hit the wall"]
+room2_clue = ["remove the painting","slide the door","push the wall","tilt the wall clock","turn on the fan"]
+room3_clue =["key is under the mat","dragh down the latch of hanging piece","pull down the bedroom rope","slide the bed"]
+
+room_selection = int(input("Please select the room you want to enter. \n1. Room 1 \t2. Room 2 \t3.Room 3. : "))
+random_clue = ""
+if room_selection == 1:
+    random_clue = random.choice(room1_clue)
+elif room_selection ==2:
+    random_clue = random.choice(room2_clue)
+elif room_selection == 3:
+    random_clue = random.choice(room3_clue)
+else:
+    print("Please mention either 1,2 or 3. You have entered invalid input.")
+
+print(f"You have selected room {room_selection} and here's a clue to escape from room - {random_clue}")
 
 """
 17. Random Shopping List Optimizer
